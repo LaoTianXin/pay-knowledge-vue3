@@ -1,0 +1,39 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "./typed-router.d.ts",
+    "./auto-imports.d.ts",
+    "./components.d.ts",
+    "mock"
+  ],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "verbatimModuleSyntax": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "vueCompilerOptions": {
+    "plugins": [
+      "@vue-macros/volar/define-options",
+      "@vue-macros/volar/define-models",
+      "@vue-macros/volar/define-props",
+      "@vue-macros/volar/define-props-refs",
+      "@vue-macros/volar/short-vmodel",
+      "@vue-macros/volar/define-slots",
+      "@vue-macros/volar/jsx-directive",
+      "@vue-macros/volar/setup-jsdoc"
+      // Choose only one of the following
+      // "@vue-macros/volar/export-expose",
+      // "@vue-macros/volar/export-props",
+      // "@vue-macros/volar/export-render",
+    ]
+    // ...
+  }
+}

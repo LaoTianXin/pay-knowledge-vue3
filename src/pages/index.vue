@@ -1,25 +1,24 @@
 <script setup lang="ts">
-import { registerSW } from 'virtual:pwa-register'
-const count = ref(0)
-
-const time = 30 * 60 * 60 * 1000
-onMounted(() => {
-  registerSW({
-    immediate: true,
-    onRegisteredSW(_url, registration) {
-      registration &&
-        setInterval(() => {
-          registration.update()
-        }, time)
-    }
-  })
-})
+import bg from '@/assets/images/bg.png'
+const swiperList: ISwiper[] = [
+  {
+    title: 'toimc',
+    subTitile: 'subTitile',
+    img: bg
+  },
+  {
+    title: 'toimc',
+    subTitile: 'subTitile',
+    img: bg
+  },
+  {
+    title: 'toimc',
+    subTitile: 'subTitile',
+    img: bg
+  }
+]
 </script>
 
 <template>
-  <main>
-    <div class="i-mdi-account"></div>
-    <div>{{ count }}</div>
-    <ReloadPrompt></ReloadPrompt>
-  </main>
+  <Swiper :swiper-list="swiperList"> </Swiper>
 </template>

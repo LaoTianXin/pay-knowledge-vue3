@@ -2,6 +2,7 @@
 import { defineConfig, presetWind, presetIcons } from 'unocss'
 import transformerDirectives from '@unocss/transformer-directives'
 export default defineConfig({
+  shortcuts: [],
   presets: [
     presetWind(),
     presetIcons({

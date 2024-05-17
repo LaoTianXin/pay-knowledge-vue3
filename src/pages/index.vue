@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import bg from '@/assets/images/bg.png'
-const swiperList: ISwiper[] = [
+const swiperList: SwiperType.ISwiper[] = [
   {
     title: 'toimc',
     subTitile: 'subTitile',
@@ -21,4 +21,5 @@ const swiperList: ISwiper[] = [
 
 <template>
   <Swiper :swiper-list="swiperList"> </Swiper>
+  <Card title="title" sub-title="subTitle" border :image="bg" :image-type="'default'"></Card>
 </template>

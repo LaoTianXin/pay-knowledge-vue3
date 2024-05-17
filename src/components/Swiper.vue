@@ -46,7 +46,12 @@ import 'swiper/css'
 
 import 'swiper/css/pagination'
 
-withDefaults(defineProps<{ swiperList: ISwiper[]; height: string }>(), {
+interface SwiperProps {
+  swiperList: SwiperType.ISwiper[]
+  height: string
+}
+
+withDefaults(defineProps<SwiperProps>(), {
   swiperList: () => [],
   height: 'h-80'
 })

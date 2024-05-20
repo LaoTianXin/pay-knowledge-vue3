@@ -11,6 +11,7 @@ declare module 'vue' {
     Container: typeof import('./src/components/Container.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconMdiAccount: typeof import('~icons/mdi/account')['default']
+    MobileFooter: typeof import('./src/components/MobileFooter.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
     ReloadPrompt: typeof import('./src/components/ReloadPrompt.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

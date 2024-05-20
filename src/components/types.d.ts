@@ -1,4 +1,4 @@
-declare namespace SwiperType {
+declare namespace Swiper {
   export interface ISwiper {
     title: string
     subTitile: string
@@ -6,6 +6,6 @@ declare namespace SwiperType {
   }
 }
 
-declare namespace CardType {
+declare namespace Card {
   export type ImageType = 'default' | 'rounded' | 'avatar'
 }

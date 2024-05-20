@@ -1,5 +1,5 @@
 // uno.config.ts
-import { defineConfig, presetWind, presetIcons } from 'unocss'
+import { defineConfig, presetWind, presetIcons, transformerVariantGroup } from 'unocss'
 import transformerDirectives from '@unocss/transformer-directives'
 export default defineConfig({
   shortcuts: [],
@@ -12,5 +12,5 @@ export default defineConfig({
       }
     })
   ],
-  transformers: [transformerDirectives()]
+  transformers: [transformerDirectives(), transformerVariantGroup()]
 })

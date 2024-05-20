@@ -18,7 +18,7 @@ interface CardProps {
   subTitle?: string
   url?: string
   border?: boolean
-  imageType?: CardType.ImageType
+  imageType?: Card.ImageType
 }
 
 const props = withDefaults(defineProps<CardProps>(), {

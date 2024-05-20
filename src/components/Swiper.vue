@@ -19,9 +19,9 @@
           :style="{ backgroundImage: `url(${swiper.img})` }"
         >
           <Container>
-            <div class="flex items-start justify-center flex-col ml-20">
-              <div class="mb-8 text-4xl fw-600">{{ swiper.title }}</div>
-              <div class="text-2xl fw-500">{{ swiper.subTitile }}</div>
+            <div class="flex items-start justify-center flex-col lt-sm:px-4">
+              <div class="mb-8 text-xl sm:text-4xl fw-600">{{ swiper.title }}</div>
+              <div class="text-sm sm:text-2xl fw-500">{{ swiper.subTitile }}</div>
             </div>
           </Container>
         </div>
@@ -47,7 +47,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 interface SwiperProps {
-  swiperList: SwiperType.ISwiper[]
+  swiperList: Swiper.ISwiper[]
   height: string
 }
 

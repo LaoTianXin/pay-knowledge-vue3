@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toimc</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-">
+  <title>toimc</title>
+  <script>
+    (() => {
+      window.addEventListener('DOMContentLoaded', () => {
+
+        const toggleDeviceClassName = function () {
+           if (/iPhone|Android|Windows Phone/i.test(navigator.userAgent)) {
+            // 在这里插入代码
+            document.body.classList.add('mobile-device')
+          }else {
+            document.body.classList.remove("mobile-device")
+          }
+        }
+        window.onresize = toggleDeviceClassName
+          // 在这里插入代码
+         toggleDeviceClassName()
+      })
+    })()
+  </script>
+
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script type="module" src="/src/main.ts"></script>
+
+</body>
+
 </html>

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import bg from '@/assets/images/bg.png'
-const swiperList: SwiperType.ISwiper[] = [
+import { useThemeStore } from '@/store/useThemeStore'
+
+const store = useThemeStore()
+const swiperList: Swiper.ISwiper[] = [
   {
     title: 'toimc',
     subTitile: 'subTitile',
@@ -20,6 +23,15 @@ const swiperList: SwiperType.ISwiper[] = [
 </script>
 
 <template>
-  <Swiper :swiper-list="swiperList"> </Swiper>
+  <Swiper :height="36 * store.rate + 'rem'" :swiper-list="swiperList"> </Swiper>
   <Card title="title" sub-title="subTitle" border :image="bg" :image-type="'default'"></Card>
+  <div class="test"></div>
 </template>
+
+<style lang="scss">
+.test {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+</style>

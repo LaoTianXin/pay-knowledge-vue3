@@ -1,17 +1,25 @@
 <template>
   <div class="pt-18">
     <div
-      class="bg-dark-100 h-18 fixed top-0 w-full z-99"
-      :class="{ 'shadow-2xl': y > 0 }"
+      class="bg-dark-100 h-18 fixed top-0 w-full z-99 transition-all duration-400"
+      :class="[
+        { 'shadow-2xl bg-black bg-opacity-30': y > 0 },
+        { 'lt-sm:( bg-black h-full)': show }
+      ]"
     >
       <Container>
         <RouterLink to="/" class="w-32 h-18 mr-10 cursor-pointer lt-sm:mx-auto">
           <img src="@/assets/images/logo.png" alt="toimc" />
         </RouterLink>
         <div
-          class="hidden i-ic-round-menu text-gray-300 text-xl absolute right-5 top-5 cursor-pointer hover:text-white lt-sm:block"
+          class="hidden text-gray-300 text-xl absolute right-5 top-5 cursor-pointer hover:text-white lt-sm:block"
           @click="() => toggle()"
-        ></div>
+        >
+          <Transition name="rotate-icon" mode="out-in">
+            <div v-if="show" class="i-radix-icons:cross-2"></div>
+            <div v-else class="i-ic-round-menu"></div>
+          </Transition>
+        </div>
         <NavBar v-show="show"></NavBar>
       </Container>
     </div>
@@ -43,4 +51,24 @@ useResizeObserver(document.body, () => {
 })
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.rotate-icon-enter-active {
+  animation: scaleYIn 0.2s;
+}
+
+.rotate-icon-leave-active {
+  animation: scaleYIn 0.2s reverse;
+}
+
+@keyframes scaleYIn {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+</style>

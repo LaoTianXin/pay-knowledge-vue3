@@ -11,7 +11,7 @@
 
 <style lang="scss" scoped>
 .navbar--item {
-  @apply relative px-10 text-white cursor-pointer fw-300 text-xl lt-sm:self-start lt-sm:(mt-2 text-black);
+  @apply relative px-10 text-white cursor-pointer fw-300 text-xl lt-sm:self-start lt-sm:(mt-2);
   &:hover {
     @apply fw-500 transition-all;
     &::after {

@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Card: typeof import('./src/components/Card.vue')['default']
     Container: typeof import('./src/components/Container.vue')['default']
+    DefaultFooter: typeof import('./src/components/DefaultFooter.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconMdiAccount: typeof import('~icons/mdi/account')['default']
     MobileFooter: typeof import('./src/components/MobileFooter.vue')['default']

@@ -1,13 +1,29 @@
 <template>
   <div class="flex lt-sm:(flex-col absolute top-18 right-0 w-full)">
-    <router-link class="navbar--item" to="/">产品</router-link>
-    <a class="navbar--item" href="https://www.imooc.com">社区</a>
-    <router-link class="navbar--item" to="/study">学习</router-link>
-    <router-link class="navbar--item" to="/about">关于</router-link>
+    <template v-for="nav in navs" :key="nav.name">
+      <a
+        v-if="isURL(nav.path)"
+        target="_blank"
+        class="navbar--item"
+        :href="nav.path"
+        >{{ nav.name }}</a
+      >
+      <router-link v-else :to="nav.path" class="navbar--item">{{
+        nav.name
+      }}</router-link>
+    </template>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { isURL } from '@/utils/url'
+interface NavBarProps {
+  navs: Nav.INav[]
+}
+withDefaults(defineProps<NavBarProps>(), {
+  navs: () => []
+})
+</script>
 
 <style lang="scss" scoped>
 .navbar--item {

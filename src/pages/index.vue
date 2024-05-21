@@ -24,8 +24,13 @@ const swiperList: Swiper.ISwiper[] = [
 
 <template>
   <Swiper :height="36 * store.rate + 'rem'" :swiper-list="swiperList"> </Swiper>
-  <Card title="title" sub-title="subTitle" border :image="bg" :image-type="'default'"></Card>
-  <div class="test"></div>
+  <Card
+    title="title"
+    sub-title="subTitle"
+    border
+    :image="bg"
+    :image-type="'default'"
+  ></Card>
 </template>
 
 <style lang="scss">

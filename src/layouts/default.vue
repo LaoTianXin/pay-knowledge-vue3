@@ -20,21 +20,24 @@
             <div v-else class="i-ic-round-menu"></div>
           </Transition>
         </div>
-        <NavBar v-show="show"></NavBar>
+        <NavBar :navs="navList" v-show="show"></NavBar>
       </Container>
     </div>
     <router-view></router-view>
-    <div class="h-300"></div>
     <div>
-      <footer class="mobile-hide">footer</footer>
+      <footer class="mobile-hide">
+        <DefaultFooter v-bind="footerProp" :navList="navList"></DefaultFooter>
+      </footer>
       <footer class="hidden mobile"><MobileFooter></MobileFooter></footer>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const { y } = useWindowScroll()
+import { navList } from '@/constant/nav'
+import * as footerProp from '@/constant/footer'
 
+const { y } = useWindowScroll()
 const [show, toggle] = useToggle(false)
 
 const flag = ref(false)

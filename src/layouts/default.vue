@@ -3,7 +3,7 @@
     <div
       class="bg-dark-100 h-18 fixed top-0 w-full z-99 transition-all duration-400"
       :class="[
-        { 'shadow-2xl bg-black bg-opacity-30': y > 0 },
+        { 'shadow-2xl bg-black': y > 0 },
         { 'lt-sm:( bg-black h-full)': show }
       ]"
     >
@@ -34,8 +34,8 @@
 </template>
 
 <script setup lang="ts">
-import { navList } from '@/constant/nav'
-import * as footerProp from '@/constant/footer'
+import { navList } from '@/constant/default'
+import * as footerProp from '@/constant/default'
 
 const { y } = useWindowScroll()
 const [show, toggle] = useToggle(false)

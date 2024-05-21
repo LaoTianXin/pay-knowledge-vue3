@@ -19,7 +19,7 @@
             :key="item.iconClass"
             :class="['group', 'relative', 'z-1', { 'ml-4': index > 0 }]"
           >
-            <div class="cursor-pointer" :class="item.iconClass"></div>
+            <div class="cursor-pointer text-3xl" :class="item.iconClass"></div>
             <img
               class="max-w-none w-30 h-30 hidden group-hover:block absolute top-0 left-50% translate-x-[-50%] translate-y-[-105%]"
               :src="item.img"
@@ -67,7 +67,6 @@
 <script setup lang="ts">
 import beianicon from '../assets/icons/beianicon.png'
 import { isURL } from '@/utils/url'
-import { IconEnum } from '@/enum/IconEnum'
 interface DefaultFooterProps {
   iconList: Footer.IIcon[]
   infoList: Footer.IInfo[]

@@ -6,6 +6,8 @@ import {
   transformerVariantGroup
 } from 'unocss'
 import transformerDirectives from '@unocss/transformer-directives'
+import { IconEnum } from './src/enum/IconEnum'
+
 export default defineConfig({
   shortcuts: [],
   presets: [
@@ -22,5 +24,6 @@ export default defineConfig({
     colors: {
       main: '#098'
     }
-  }
+  },
+  safelist: Object.values(IconEnum)
 })

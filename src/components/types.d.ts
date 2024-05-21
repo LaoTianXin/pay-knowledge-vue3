@@ -1,5 +1,5 @@
 declare namespace Footer {
-  export type iconClass = string
+  export type iconClass = IconEnum
   export interface IIcon {
     iconClass: iconClass
     img: string

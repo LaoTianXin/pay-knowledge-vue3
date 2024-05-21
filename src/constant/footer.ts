@@ -1,20 +1,20 @@
 import wechat from '@/assets/images/wechat.jpg'
 import sina from '@/assets/images/sina.jpg'
-
+import { IconEnum } from '@/enum/IconEnum'
 export const iconList: Footer.IIcon[] = [
   {
-    iconClass: 'i-ic:baseline-wechat',
+    iconClass: IconEnum.IcoWechat,
     img: wechat
   },
   {
-    iconClass: 'i-bi:sina-weibo',
+    iconClass: IconEnum.IcoSina,
     img: sina
   }
 ]
 
 export const infoList: Footer.IInfo[] = [
   {
-    iconClass: 'i-bi:phone mr-2',
+    iconClass: IconEnum.IcoPhone,
     title: '联系信息',
     infoDetailList: [
       {
@@ -30,7 +30,7 @@ export const infoList: Footer.IInfo[] = [
     ]
   },
   {
-    iconClass: 'i-ph:link-light',
+    iconClass: IconEnum.IcoLink,
     title: '友链信息',
     infoDetailList: [
       {

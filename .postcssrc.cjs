@@ -4,7 +4,7 @@ module.exports = {
       // 目标单位
       unitToConvert: "px",
       // 设计稿宽度
-      viewportWidth: 375,
+      viewportWidth: 1920,
       // 保留几位小数
       unitPrecision: 6,
       // font-size 不做转化

@@ -10,6 +10,7 @@ import { IconEnum } from './src/enum/IconEnum'
 
 export default defineConfig({
   shortcuts: [],
+  rules: [[/grid-area-(\w+)/, ([, d]) => ({ 'grid-area': d })]],
   presets: [
     presetWind(),
     presetIcons({

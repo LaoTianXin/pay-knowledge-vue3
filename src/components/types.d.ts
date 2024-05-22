@@ -33,8 +33,8 @@ declare namespace Nav {
 
 declare namespace Swiper {
   export interface ISwiper {
-    title: string
-    subTitile: string
+    title?: string
+    subTitile?: string
     img: string
   }
 }

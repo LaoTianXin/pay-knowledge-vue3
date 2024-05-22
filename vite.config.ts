@@ -12,15 +12,25 @@ import Layouts from 'vite-plugin-vue-layouts'
 import VueMacros from 'unplugin-vue-macros/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import { viteMockServe } from 'vite-plugin-mock'
+import Markdown from 'unplugin-vue-markdown/vite'
+import prism from 'markdown-it-prism'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    VueRouter(),
+    VueRouter({
+      extensions: ['.vue', '.md']
+    }),
     VueMacros({
       plugins: {
-        vue: Vue(),
+        vue: Vue({
+          include: [/\.vue$/, /\.md$/]
+        }),
         vueJsx: VueJsx() // if needed
       }
+    }),
+    Markdown({
+      headEnabled: true,
+      markdownItUses: [prism]
     }),
     UnoCSS(),
     AutoImport({
@@ -35,13 +45,15 @@ export default defineConfig({
         'vue',
         VueRouterAutoImports,
         // custom
-        '@vueuse/core'
+        '@vueuse/core',
+        'pinia'
       ]
     }),
     Components({
       dts: true,
       directoryAsNamespace: true,
-      collapseSamePrefixes: true
+      collapseSamePrefixes: true,
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/]
     }),
     Layouts({
       layoutsDirs: 'src/layouts',

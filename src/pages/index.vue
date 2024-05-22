@@ -127,7 +127,21 @@ const store = useThemeStore()
     <FreeSwiper :items="partners"></FreeSwiper>
   </Container>
   <Container class="py-4">
-    <div class="w-2/3 h-[200px]"></div>
+    <div class="w-2/3 grid h-100 grid-flow-row grid-flow-col gap-3 m-15">
+      <div
+        class="w-full h-full bg-gray col-span-4 row-span-1 row-start-1 col-start-1"
+      ></div>
+
+      <div
+        class="w-full h-full bg-pink col-span-2 row-span-2 col-start-1 row-start-2"
+      ></div>
+      <div
+        class="w-full h-full bg-sky col-span-2 row-span-1 row-start-2 col-start-3"
+      ></div>
+      <div
+        class="w-full h-full bg-emerald col-span-2 row-span-1 col-start-3 row-start-3"
+      ></div>
+    </div>
     <div class="w-1/3 self-stretch flex flex-col justify-center">
       <div class="text-2xl font-bold pb-4">讲师团队</div>
       <div class="text-sm text-gray-400">

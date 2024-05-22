@@ -7,6 +7,7 @@
     @slideChange="onSlideChange"
     :navigation="{ prevEl: '.prev', nextEl: '.next' }"
     :pagination="{ type: 'fraction', el: '.pagination' }"
+    class="w-full"
     :class="getSwiperHeight(height).class"
     :style="getSwiperHeight(height).style"
     autoplay
@@ -20,8 +21,12 @@
         >
           <Container>
             <div class="flex items-start justify-center flex-col lt-sm:px-4">
-              <div class="mb-8 text-xl sm:text-4xl fw-600">{{ swiper.title }}</div>
-              <div class="text-sm sm:text-2xl fw-500">{{ swiper.subTitile }}</div>
+              <div v-if="swiper.title" class="mb-8 text-xl sm:text-4xl fw-600">
+                {{ swiper.title }}
+              </div>
+              <div v-if="swiper.subTitile" class="text-sm sm:text-2xl fw-500">
+                {{ swiper.subTitile }}
+              </div>
             </div>
           </Container>
         </div>
@@ -32,8 +37,14 @@
       class="flex justify-center items-center absolute right-0 bottom-0 bg-white opacity-60 text-dark-300 w-40 h-12 z-30"
     >
       <div class="pagination w-unset! font-bold mr-4"></div>
-      <div class="prev i-mdi-arrow-left-thin cursor-pointer" style="font-size: 2rem"></div>
-      <div class="next i-mdi-arrow-right-thin cursor-pointer" style="font-size: 2rem"></div>
+      <div
+        class="prev i-mdi-arrow-left-thin cursor-pointer"
+        style="font-size: 2rem"
+      ></div>
+      <div
+        class="next i-mdi-arrow-right-thin cursor-pointer"
+        style="font-size: 2rem"
+      ></div>
     </div>
   </swiper>
 </template>

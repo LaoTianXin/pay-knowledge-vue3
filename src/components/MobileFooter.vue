@@ -1,5 +1,7 @@
 <template>
-  <div class="fixed bottom-0 w-full h-14 flex justify-around z-30 shadow-2xl border-t">
+  <div
+    class="fixed bottom-0 w-full h-14 flex justify-around z-30 shadow-2xl border-t"
+  >
     <router-link class="item" to="/">
       <i class="i-carbon:home"></i>
       <span>首页</span>
@@ -9,7 +11,9 @@
       <span>社区</span>
     </a>
     <router-link class="item" to="/study">
-      <i class="i-streamline:interface-content-book-2-library-content-books-book-shelf-stack"></i>
+      <i
+        class="i-streamline:interface-content-book-2-library-content-books-book-shelf-stack"
+      ></i>
       <span>学习</span>
     </router-link>
     <router-link class="item" to="/about">

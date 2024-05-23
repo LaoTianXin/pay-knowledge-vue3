@@ -17,11 +17,13 @@ declare module 'vue' {
     IconMdiAccount: typeof import('~icons/mdi/account')['default']
     ImageSwiper: typeof import('./src/components/ImageSwiper.vue')['default']
     MobileFooter: typeof import('./src/components/MobileFooter.vue')['default']
+    Modal: typeof import('./src/components/Modal.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
     ReloadPrompt: typeof import('./src/components/ReloadPrompt.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Swiper: typeof import('./src/components/Swiper.vue')['default']
     Tabs: typeof import('./src/components/Tabs.vue')['default']
+    Toast: typeof import('./src/components/Toast.vue')['default']
   }
 }

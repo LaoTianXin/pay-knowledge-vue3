@@ -1,19 +1,24 @@
 <script setup lang="ts">
 import { swiperList } from '@/constant'
+const route = useRoute()
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-1 flex-col">
     <div class="relative">
       <!-- 轮播图区域 -->
       <Swiper height="h-80" :swiper-list="swiperList"></Swiper>
       <!-- 会员登录区域 -->
       <div
-        class="absolute bottom-0 left-0 w-full py-2 opacity-70 bg-gray-700 z-9"
+        class="absolute bottom-0 left-0 w-full py-2 bg-opacity-70 bg-gray-700 z-9"
       >
         <Container>
           <div class="w-full flex items-center justify-between">
-            <div class="flex type">
+            <div class="flex type" v-if="route.name === '/study/cart'">
+              <div class="item active">购物车</div>
+            </div>
+
+            <div class="flex type" v-else>
               <div class="item active">每日一课</div>
               <div class="item">精品微课</div>
               <div class="item">学习计划</div>
@@ -52,7 +57,6 @@ import { swiperList } from '@/constant'
         </Container>
       </div>
     </div>
-
     <router-view></router-view>
   </div>
 </template>

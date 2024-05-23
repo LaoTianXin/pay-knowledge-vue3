@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-18">
+  <div class="pt-18 min-h-100vh flex flex-col">
     <div
       class="bg-dark-100 h-18 fixed top-0 w-full z-99 transition-all duration-400"
       :class="[

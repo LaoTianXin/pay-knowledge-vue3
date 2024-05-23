@@ -7,7 +7,7 @@
     ></div>
     <div v-else :class="[icon, 'w-20 h-20']"></div>
     <div v-if="title || subTitle" :class="titleClass">
-      <p class="text-lg text-dark-300 text-bold pb-2 line-clamp-1">
+      <p class="text-dark-300 text-bold mb-2 line-clamp-2">
         {{ title }}
       </p>
       <p class="text-sm text-dark-100 font-300 line-clamp-2">{{ subTitle }}</p>

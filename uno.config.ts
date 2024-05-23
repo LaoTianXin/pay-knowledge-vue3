@@ -13,7 +13,8 @@ export default defineConfig({
     {
       btn: 'mr-3 px-4 py-2 bg-sky text-white flex justify-center items-center border-1 border-white cursor-pointer hover:bg-sky/90',
       'btn-plain':
-        'mr-3 px-8 py-2 bg-white text-sky flex justify-center items-center border-1 border-sky cursor-pointer hover:bg-sky/10'
+        'mr-3 px-8 py-2 bg-white text-sky flex justify-center items-center border-1 border-sky cursor-pointer hover:bg-sky/10',
+      'lesson-title': 'text-4xl font-bold line-height-20'
     }
   ],
   rules: [[/grid-area-(\w+)/, ([, d]) => ({ 'grid-area': d })]],

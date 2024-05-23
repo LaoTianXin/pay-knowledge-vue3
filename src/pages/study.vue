@@ -15,9 +15,9 @@ import { swiperList } from '@/constant'
           <div class="w-full flex items-center justify-between">
             <div class="flex type">
               <div class="item active">每日一课</div>
-              <div class="item">每日一课</div>
-              <div class="item">每日一课</div>
-              <div class="item">每日一课</div>
+              <div class="item">精品微课</div>
+              <div class="item">学习计划</div>
+              <div class="item">优质专栏</div>
             </div>
 
             <div class="flex items-center">
@@ -64,18 +64,6 @@ import { swiperList } from '@/constant'
     &.active,
     &:hover {
       @apply rounded-full bg-white text-black;
-    }
-  }
-}
-
-.course {
-  .item {
-    @apply text-gray-500 text-sm cursor-pointer m-5;
-    &.active {
-      @apply text-sky-500 relative;
-      &::after {
-        @apply content-empty bg-sky-500 absolute left-[calc(50%-1rem)] bottom--1 w-8 h-2px;
-      }
     }
   }
 }

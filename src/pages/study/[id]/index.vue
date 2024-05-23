@@ -35,11 +35,7 @@
         <!-- 详细信息页面.md -->
         <div class="w-3/4 bg-white rounded-lg p-2">
           <!-- tab切换界面 -->
-          <div class="flex course">
-            <div class="item active">课程介绍</div>
-            <div class="item">章节目录</div>
-            <div class="item">学员评价</div>
-          </div>
+          <Tabs v-model:activeIndex="activeIndex" :tabList="tabs"></Tabs>
           <MarkDown></MarkDown>
         </div>
         <!-- 课程推荐 -->
@@ -56,7 +52,13 @@
 
 <script setup lang="ts">
 import { useParams } from '@/hooks/useParams'
-import MarkDown from '../project/test.md'
+import MarkDown from '../../project/test.md'
+
+const tabs = ['课程介绍', '章节目录', '学员评价']
+
+const activeIndex = ref(0)
+
+provide('activeIndex', activeIndex)
 type ParamsType = {
   id: string
 }

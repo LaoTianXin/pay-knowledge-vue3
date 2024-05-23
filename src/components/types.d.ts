@@ -47,3 +47,23 @@ declare namespace Swiper {
 declare namespace Card {
   export type ImageType = 'default' | 'rounded' | 'avatar'
 }
+
+declare namespace Member {
+  export interface UserRightsItemType {
+    name: string
+    path?: string
+    value: string | boolean | number
+  }
+
+  export interface UserRightsType {
+    name: string
+    rights: UserRightsItemType[]
+    price: number
+  }
+
+  export interface PartnerType {
+    name: string
+    desc: string
+    image?: string
+  }
+}

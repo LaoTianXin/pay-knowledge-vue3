@@ -16,6 +16,7 @@ declare module 'vue' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconMdiAccount: typeof import('~icons/mdi/account')['default']
     ImageSwiper: typeof import('./src/components/ImageSwiper.vue')['default']
+    MemberBenefits: typeof import('./src/components/MemberBenefits.vue')['default']
     MobileFooter: typeof import('./src/components/MobileFooter.vue')['default']
     Modal: typeof import('./src/components/Modal.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']

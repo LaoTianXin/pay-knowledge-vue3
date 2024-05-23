@@ -1,3 +1,8 @@
+declare interface GenericType<T> {
+  items: T[]
+  selectedItem?: T
+}
+
 declare namespace Footer {
   export type iconClass = IconEnum
   export interface IIcon {

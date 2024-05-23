@@ -36,7 +36,9 @@
         <div class="w-3/4 bg-white rounded-lg p-2">
           <!-- tab切换界面 -->
           <Tabs v-model:activeIndex="activeIndex" :tabList="tabs"></Tabs>
-          <MarkDown></MarkDown>
+          <MarkDown v-if="activeIndex === 0"></MarkDown>
+          <Chapters v-if="activeIndex === 1" v-bind="chaptersProps"></Chapters>
+          <Comments v-if="activeIndex === 2" v-bind="commentsProps"></Comments>
         </div>
         <!-- 课程推荐 -->
         <div class="w-1/4 bg-sky h-full rounded-lg">
@@ -53,8 +55,51 @@
 <script setup lang="ts">
 import { useParams } from '@/hooks/useParams'
 import MarkDown from '../../project/test.md'
+import yinke from '@/assets/images/yinke.png'
 
 const tabs = ['课程介绍', '章节目录', '学员评价']
+const chaptersProps = {
+  items: [
+    {
+      title: '第一章节',
+      children: [
+        {
+          title: '第一章节1'
+        },
+        {
+          title: '第一章节2'
+        },
+        {
+          title: '第一章节3'
+        }
+      ]
+    },
+    {
+      title: '第二章节',
+      children: [
+        {
+          title: '第一章节1'
+        },
+        {
+          title: '第一章节2'
+        },
+        {
+          title: '第一章节3'
+        }
+      ]
+    }
+  ]
+}
+
+const commentsProps = {
+  items: [
+    {
+      image: yinke,
+      username: 'yinke',
+      desc: 123456
+    }
+  ]
+}
 
 const activeIndex = ref(0)
 

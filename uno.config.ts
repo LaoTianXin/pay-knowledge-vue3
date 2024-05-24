@@ -5,7 +5,9 @@ import {
   presetIcons,
   transformerVariantGroup
 } from 'unocss'
+import presetAttributify from '@unocss/preset-attributify'
 import transformerDirectives from '@unocss/transformer-directives'
+import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
 import { IconEnum } from './src/enum/IconEnum'
 
 export default defineConfig({
@@ -20,6 +22,7 @@ export default defineConfig({
   rules: [[/grid-area-(\w+)/, ([, d]) => ({ 'grid-area': d })]],
   presets: [
     presetWind(),
+    presetAttributify(),
     presetIcons({
       prefix: 'i-',
       extraProperties: {
@@ -27,7 +30,11 @@ export default defineConfig({
       }
     })
   ],
-  transformers: [transformerDirectives(), transformerVariantGroup()],
+  transformers: [
+    transformerDirectives(),
+    transformerVariantGroup(),
+    transformerAttributifyJsx()
+  ],
   theme: {
     colors: {
       main: '#098'
